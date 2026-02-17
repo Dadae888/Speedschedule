@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Popup</title>
+	<link rel="stylesheet" href="style.css">
+
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border-radius: 8px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<button style="background-color: red ; padding: 20px 40px; font-size: 20px;" onclick="openPopup()">Ajouter un évènement</button>
+
+<div class="overlay" id="overlay"></div>
+<div id="greetingText" style="margin-top: 20px; font-size: 24px;"></div>
+
+<div class="popup" id="popup">
+    <h3>Enter your name</h3>
+    <input type="text" id="username" placeholder="Your name">
+    <br><br>
+    <button id="submitBtn">Submit</button>
+    <button onclick="closePopup()">Cancel</button>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
